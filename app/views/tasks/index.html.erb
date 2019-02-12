@@ -1,0 +1,27 @@
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+
+
+
+
+<h1>My tasks</h1>
+
+<% @tasks.each do |task| %>
+<!--   <h2><%= task.title %></h2> -->
+<!--   <p><%= task.details %></p> -->
+
+<!-- Default unchecked -->
+<% if task.completed %>
+  <div><input type="checkbox" class="custom-control-input" id="defaultChecked2" checked disabled>
+  <label class="custom-control-label" for="defaultChecked2"><%= task.title %></label>
+  </div>
+
+<% else %>
+  <div>
+  <input type="checkbox" class="custom-control-input" id="defaultUnchecked" disabled>
+  <label class="custom-control-label" for="defaultUnchecked"><%= task.title %></label>
+  </div>
+
+  <% end %>
+<% end %>
+
+<!-- Default checked -->
