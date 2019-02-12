@@ -1,4 +1,4 @@
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+
 
 
 
@@ -12,16 +12,22 @@
 <!-- Default unchecked -->
 <% if task.completed %>
   <div><input type="checkbox" class="custom-control-input" id="defaultChecked2" checked disabled>
-  <label class="custom-control-label" for="defaultChecked2"><%= task.title %></label>
+  <label class="custom-control-label" for="defaultChecked2"><%= link_to task.title, task_path(task)%></label>
   </div>
 
 <% else %>
   <div>
   <input type="checkbox" class="custom-control-input" id="defaultUnchecked" disabled>
-  <label class="custom-control-label" for="defaultUnchecked"><%= task.title %></label>
+  <label class="custom-control-label" for="defaultUnchecked"><%= link_to task.title, task_path(task)%></label>
   </div>
 
   <% end %>
 <% end %>
+<br>
+<br>
+<hr size= "1" color= #E8E9ED>
+
+<div class="back_url"><em><%= link_to " + Add a task", tasks_new_path %></em></div>
+
 
 <!-- Default checked -->

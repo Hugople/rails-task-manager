@@ -1,0 +1,17 @@
+<h1><%= @task.title %></h1>
+<div class="contain-show">
+  <p><%= @task.details %></p>
+</div>
+<% if @task.completed %>
+  <div><input type="checkbox" class="custom-control-input" id="defaultChecked2" checked disabled>
+  <label class="custom-control-label" for="defaultChecked2">This task is completed
+  </div>
+
+<% else %>
+  <div>
+  <input type="checkbox" class="custom-control-input" id="defaultUnchecked" disabled>
+  <label class="custom-control-label" for="defaultUnchecked">This task is not completed yet
+  </div>
+<% end %>
+<div class="back_url"><em><%= link_to "Back to the list", tasks_path %>
+</em></div>
